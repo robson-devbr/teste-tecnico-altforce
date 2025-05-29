@@ -1,0 +1,83 @@
+// Abrir o terminal 
+
+// Digitar chmod +x start-docker.sh
+
+// ./start-docker.sh
+
+// Escolha a opção 1 ( docker-compose up --build )
+
+// ver logs
+
+Abrir o Postman
+// Register and Login
+// http://localhost:3000/api/register (POST) - Criar usuário
+// {
+//   "name": "Robson",
+//   "email": "robson@admin.com",
+//   "password": "admin"
+// }
+
+// http://localhost:3000/api/login (POST) - Login usuário
+// {
+//   "email": "robson@admin.com",
+//   "password": "admin",
+// }
+
+// Ok - Gerou um token usa ele pra tudo
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx
+
+// Importante rodar os testes dentro do container 
+// docker 
+
+// Products
+// http://localhost:3000/api/products (POST) - (criar) Produto
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx
+// {
+//   "name": "Notebook Asus",
+//   "description": "Notebook potente para programação",
+//   "price": 4200.50,
+//   "category": "Eletrônicos"
+// }
+
+// http://localhost:3000/api/products/<id> - (GET) - Buscar por id
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx
+
+// http://localhost:3000/api/products/<id> - (PUT) - Atualizar por id
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx
+
+// http://localhost:3000/api/products/<id> - (DELETE) - Deletar pelo id
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx
+
+// Ordem
+// http://localhost:3000/api/orders (POST) - Criar Pedido ou Order
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx
+// {
+//   "items": [
+//     {
+//       "productId": "4acbeb8d-d9d5-441b-99d5-f8dc1b3eaa97",
+//       "quantity": 1
+//     }
+//   ]
+// }
+
+IA
+// http://localhost:3000/api/summarize-orders - (GET) - IA vai analizar
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx
+// Body (none)
+
+// http://localhost:3000/api/suggest-category - (POST) - IA vai buscar categoria
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx 
+// {
+//    "description": "Computador para programação"
+// }
+  
+// http://localhost:3000/api/generate-description - (POST) - IA vai sugerir uma descrição comercial
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx 
+// {
+//    "name": "Cadeira Gamer ThunderX3",
+//    "category": "Móveis"
+// }
+
+// http://localhost:3000/api/detect-anomalies - (GET) - IA 
+// Authorization: Type Bearer Token: xxxxxxxxxxxxxxxxx 
+// Body (none)

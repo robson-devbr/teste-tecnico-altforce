@@ -1,0 +1,6 @@
+🚀 Server is running on port 3000
+🟢 Server started successfully at http://localhost:3000
+✅ API ready and listening on port 3000
+🌐 Server up and accessible!
+⚙️ Server initialized
+🔥 Server live on port 3000

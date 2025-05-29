@@ -1,0 +1,134 @@
+Arquitetura de pastas 
+
+src/
+├── domain/
+│   ├── entities/              
+│   │   └── Products.ts           
+│   │   └── User.ts
+│   │   └── OrderItem.ts        
+│   │   └── Order.ts        
+|   |
+│   ├── enums/                
+│   │   └── ProductCategory.ts        
+│   │   └── UserRole.ts        
+│   │   └── OrderStatus.ts        
+|   |
+|   |
+│   ├── repositories/         
+│       └── ProductRepository.ts  
+│       └── UserRole.ts        
+│       └── OrderRepository.ts        
+|
+├── config/              
+│       └── pool.ts  
+|
+├── application/
+│   ├── dtos/                 
+│   |   ├── product-dtos/                 
+│   │   |    ├── CreateProductDTOs.ts 
+│   │   |    ├── DeleteProductDTOs.ts 
+│   │   |    ├── UpdateProductDTOs.ts 
+│   │   |    ├── ListProductDTOs.ts 
+│   │   |    ├── FindProductPByIdDTOs.ts 
+|   |   |      
+│   |   ├── order-dtos/                 
+│   │   |    ├── CreateOrderDTO.ts 
+│   │   |    ├── OrderItemDTO.ts 
+│   │   |    ├── OrderResponseDTO.ts 
+|   |   |
+|   |   |  
+│   |   ├── auth-dtos/                 
+│   │   |     ├── LoginUserDTOs.ts 
+│   │   |     ├── RegisterUserDTOs.ts 
+|   |   |
+│   |   ├── ai-dtos/                 
+│   │        ├── SuggestCategoryResponseDTO.ts 
+|   |
+│   │          
+│   ├── usecases/              
+│       ├── ai-cases/              
+│       │   ├── DetectAnomaliesUseCase.ts
+│       │   ├── GenerateProductDescriptionUseCase.tsts
+│       │   ├── SuggestProductCategoryUseCase.ts
+│       │   ├── SummarizeOrdersUseCase.ts
+|       |
+│       ├── user/              
+│       │   ├── RegisterUserUseCase.ts 
+│       │   ├── LoginUserUseCase.ts 
+|       |
+|       |   
+│       ├── product/              
+│       │   ├── CreateProductUseCase.ts
+│       │   ├── DeleteProductUseCase.ts
+│       │   ├── ListProductUseCase.ts
+│       │   ├── UpdateProductUseCase.ts
+|       |   ├── FindProductByIdUseCase.ts
+|       |  
+│       ├── order-cases/              
+│       |    ├── CancelOrderUseCase.ts 
+│       |    ├── CreateOrderUseCase.ts 
+│       |    ├── GetOrderByIdUseCase.ts 
+│       |    ├── ListOrderUseCase.ts 
+|       |
+│       ├── order-cases/              
+│           ├── CancelOrderUseCase.ts 
+|
+|      
+├── infra/
+│   ├── repositories/          
+│   │   └── PgOrderRepository.ts
+│   │   └── PgProductRepository.ts
+│   │   └── PgUserRepository.ts
+|   |
+│   ├── database/          
+│   │   └── init.sql
+|   |
+│   ├── database/ 
+│       ├── cohere/          
+│           └── cohere-client.ts
+│           └── CohereAIClassifierService.ts
+|
+│
+├── interfaces/
+|   ├── http/  
+│   |   ├── controllers/
+|   |        |
+|   │        ├── auth/          
+│   |        |   └── loginController.ts  
+│   |        |   └── registerController.ts 
+|   │        ├── order/          
+│   |        |   └── OrderController.ts 
+|   │        ├── products/          
+│   |        |    └── productController.ts 
+|   │        ├── ai-controller/          
+│   |            └── AIController.ts 
+│   |            └── DetectAnomaliesController.ts 
+│   |            └── GenerateProductDescriptionController.ts 
+│   |            └── SummarizeOrdersController.ts 
+|   |   
+│   ├── middlewares/           
+|   |   └── authMiddleware.ts        
+│   ├── routes/          
+│       └── aiRoutes.ts 
+│       └── authRoutes.ts  
+│       └── orderRoutes.ts 
+│       └── productRoutes.ts 
+|
+├── scripts/                    
+│   └── run-sql.ts                 
+|
+├── shared/                    
+│   └── token.txt                 
+│
+├── config/                    
+│   └── env.ts                 
+│
+├── app.ts                     
+|
+├── main.ts                    
+|
+├── .env                    
+|
+├── Dockerfile                    
+|
+├── docker-compose.yml                    
